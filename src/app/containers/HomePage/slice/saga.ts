@@ -10,7 +10,7 @@ import { actions } from '.';
 export function* get() {
   try {
     const { response, error } = yield call(request, {
-      url: '/posts',
+      url: `/file`,
       method: 'GET',
     });
     if (response) {

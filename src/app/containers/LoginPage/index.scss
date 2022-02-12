@@ -1,0 +1,22 @@
+.login-wrapper {
+  width: 100%;
+  max-width: 100% !important;
+  min-width: 100% !important;
+  .center-inside {
+    height: 100vh;
+  }
+}
+.login-paper {
+  padding: 72px 24px;
+  border-radius: 10px !important;
+  h4 {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  .input {
+    margin-bottom: 16px;
+  }
+  .show-password {
+    margin-bottom: 16px;
+  }
+}

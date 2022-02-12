@@ -24,7 +24,7 @@ const slice = createSlice({
       state.failure = false;
     },
     getSuccess(state, actions) {
-      state.data = actions.payload;
+      state.data = actions.payload.data;
       state.loading = false;
       state.success = true;
       state.failure = false;

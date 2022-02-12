@@ -1,0 +1,26 @@
+.home-root {
+  width: 90% !important;
+  padding: 0 !important;
+  .title {
+    margin-top: 32px;
+    padding: 16px;
+    background-color: #F57C00;
+    h2 {
+      text-align: center;
+    }
+  }
+}
+.file-wrappper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 32px 0;
+  a {
+      text-decoration: none;
+  }
+}
+.file{
+    margin: 0 8px 16px 8px;
+    padding: 8px 16px;
+    background-color: #2196F3;
+}
