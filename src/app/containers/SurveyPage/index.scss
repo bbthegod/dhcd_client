@@ -17,6 +17,19 @@
   flex-wrap: wrap;
   margin: 32px 0;
   a {
-      text-decoration: none;
+    text-decoration: none;
   }
+  h4 {
+    font-weight: bold !important;
+    margin-bottom: 8px;
+  }
+}
+.survey {
+  margin: 16px 0px;
+}
+.submit-button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 64px;
 }

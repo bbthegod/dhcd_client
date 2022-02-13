@@ -5,7 +5,6 @@
  */
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useHistory } from 'react-router-dom';
 import { actions } from './slice';
 import { selectPlayData } from './slice/selectors';
 
@@ -22,7 +21,6 @@ export default function QuizPage(props: Props) {
   //====================================== Hooks ======================================
   const playData = useSelector(selectPlayData);
   const dispatch = useDispatch();
-  const history = useHistory();
   //====================================== State ======================================
   const [question, setQuestion] = useState<Question>();
   const [index, setIndex] = useState(0);

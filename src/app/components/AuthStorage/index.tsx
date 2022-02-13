@@ -28,8 +28,7 @@ export default function AuthStorage(props) {
   const set = (data: AuthStorage, callback: Function) => {
     let auth = {
       token: data.token,
-      username: data.username,
-      role: data.role,
+      user: data.user,
     };
     jwt.sign(auth, 'shhhhh', (err, token) => {
       if (!err) {

@@ -18,18 +18,17 @@ const slice = createSlice({
   name: 'surveyPage',
   initialState,
   reducers: {
-    get(state) {
+    send(state, payload) {
       state.loading = true;
       state.success = false;
       state.failures = false;
     },
-    getSuccess(state, actions) {
-      state.data = actions.payload;
+    sendSuccess(state) {
       state.loading = false;
       state.success = true;
       state.failures = false;
     },
-    getFailure(state) {
+    sendFailure(state) {
       state.loading = false;
       state.success = false;
       state.failures = true;
