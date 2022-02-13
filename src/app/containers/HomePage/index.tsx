@@ -5,17 +5,19 @@
  */
 import { useContext, useMemo } from 'react';
 import { Container, Typography } from '@mui/material';
+import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import AuthStorageContext from 'context/AuthStorageContext';
+import { actions } from './slice';
 import './index.scss';
 
 interface Props {}
 
 export default function HomePage(props: Props) {
+  const dispatch = useDispatch();
   const AuthStorage = useContext(AuthStorageContext);
   const history = useHistory();
   const auth = AuthStorage.get();
-  console.log(auth);
   const user = useMemo(() => auth?.user, [auth]);
   return (
     <Container className="home-page">
@@ -39,7 +41,7 @@ export default function HomePage(props: Props) {
             </Typography>
           </div>
           {user.role === 'user' && (
-            <div className="item-4" onClick={() => history.push('/quiz')}>
+            <div className="item-4" onClick={() => dispatch(actions.checkin())}>
               <Typography variant="h3" component="h3">
                 ĐIỂM DANH
               </Typography>

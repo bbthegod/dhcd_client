@@ -4,6 +4,7 @@ import { DashboardState } from 'app/containers/Dashboard/slice/types';
 import { HomePageState } from 'app/containers/HomePage/slice/types';
 import { SurveyPageState } from 'app/containers/SurveyPage/slice/types';
 import { QuizPageState } from 'app/containers/QuizPage/slice/types';
+import { HomePageState } from 'app/containers/HomePage/slice/types';
 // GENERATE NEW CONTAINER STATE ABOVE, DO NOT DELETE IT
 
 interface RootState {
@@ -13,5 +14,6 @@ interface RootState {
   homePage?: HomePageState;
   surveyPage?: SurveyPageState;
   quizPage?: QuizPageState;
+  homePage?: HomePageState;
   // GENERATE NEW REDUCER KEY ABOVE, DO NOT DELETE IT
 }

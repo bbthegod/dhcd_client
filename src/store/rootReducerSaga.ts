@@ -6,6 +6,7 @@ import { loginPageSlice } from 'app/containers/LoginPage/slice';
 import { dashboardSlice } from 'app/containers/Dashboard/slice';
 import { surveyPageSlice } from 'app/containers/SurveyPage/slice';
 import { quizPageSlice } from 'app/containers/QuizPage/slice';
+import { homePageSlice } from 'app/containers/HomePage/slice';
 // GENERATE NEW IMPORT ABOVE, DO NOT DELETE IT
 
 const slices = [
@@ -14,6 +15,7 @@ const slices = [
   filePageSlice,
   surveyPageSlice,
   quizPageSlice,
+  homePageSlice,
   // GENERATE NEW SLICE ABOVE, DO NOT DELETE IT
 ];
 
