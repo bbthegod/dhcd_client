@@ -3,9 +3,13 @@ body {
   height: 100%;
   width: 100%;
   font-family: 'Roboto', sans-serif;
-  background-color: #e3f2fd;
   padding: 0;
   margin: 0;
+  background-image: url('../images/back.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 #root {
@@ -13,7 +17,7 @@ body {
   min-width: 100%;
 }
 
-.center-inside{
+.center-inside {
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
