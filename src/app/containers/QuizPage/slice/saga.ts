@@ -21,7 +21,7 @@ export function* get() {
       yield put(
         snackbarActions.openSnackbar({
           message: 'Thao tác thất bại!',
-          variant: 'success',
+          variant: 'error',
         }),
       );
     }
@@ -30,7 +30,7 @@ export function* get() {
     yield put(
       snackbarActions.openSnackbar({
         message: 'Thao tác thất bại!',
-        variant: 'success',
+        variant: 'error',
       }),
     );
   }
@@ -49,7 +49,7 @@ export function* end() {
       yield put(
         snackbarActions.openSnackbar({
           message: 'Thao tác thất bại!',
-          variant: 'success',
+          variant: 'error',
         }),
       );
     }
@@ -58,7 +58,7 @@ export function* end() {
     yield put(
       snackbarActions.openSnackbar({
         message: 'Thao tác thất bại!',
-        variant: 'success',
+        variant: 'error',
       }),
     );
   }
@@ -79,7 +79,7 @@ export function* answer(payload) {
       yield put(
         snackbarActions.openSnackbar({
           message: 'Trả lời thất bại!',
-          variant: 'success',
+          variant: 'error',
         }),
       );
     }
@@ -88,7 +88,7 @@ export function* answer(payload) {
     yield put(
       snackbarActions.openSnackbar({
         message: 'Trả lời thất bại!',
-        variant: 'success',
+        variant: 'error',
       }),
     );
   }

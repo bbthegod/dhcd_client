@@ -21,7 +21,7 @@ export function* get() {
       yield put(
         snackbarActions.openSnackbar({
           message: 'Thao tác thất bại!',
-          variant: 'success',
+          variant: 'error',
         }),
       );
     } else {
@@ -29,7 +29,7 @@ export function* get() {
       yield put(
         snackbarActions.openSnackbar({
           message: 'Thao tác thất bại!',
-          variant: 'success',
+          variant: 'error',
         }),
       );
     }
@@ -38,7 +38,7 @@ export function* get() {
     yield put(
       snackbarActions.openSnackbar({
         message: 'Thao tác thất bại!',
-        variant: 'success',
+        variant: 'error',
       }),
     );
   }
