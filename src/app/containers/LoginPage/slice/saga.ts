@@ -13,7 +13,7 @@ export function* login(payload) {
       url: '/auth/login',
       method: 'POST',
       data: {
-        userName: payload.payload.username,
+        username: payload.payload.username,
         password: payload.payload.password,
       },
     });

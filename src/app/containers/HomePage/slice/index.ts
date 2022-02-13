@@ -11,7 +11,7 @@ export const initialState: HomePageState = {
   data: [],
   loading: false,
   success: false,
-  failure: false,
+  failures: false,
 };
 
 const slice = createSlice({
@@ -21,22 +21,22 @@ const slice = createSlice({
     get(state) {
       state.loading = true;
       state.success = false;
-      state.failure = false;
+      state.failures = false;
     },
     getSuccess(state, actions) {
-      state.data = actions.payload.data;
+      state.data = actions.payload;
       state.loading = false;
       state.success = true;
-      state.failure = false;
+      state.failures = false;
     },
     getFailure(state) {
       state.loading = false;
       state.success = false;
-      state.failure = true;
+      state.failures = true;
     },
   },
 });
 
 export const { actions } = slice;
 
-export const homePageSlice = { key: slice.name, actions: slice.actions, reducer: slice.reducer, saga: homePageSaga };
+export const homePageSlice = { key: slice.name, reducer: slice.reducer, saga: homePageSaga };

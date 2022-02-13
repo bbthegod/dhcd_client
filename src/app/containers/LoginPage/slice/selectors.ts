@@ -16,7 +16,7 @@ export const selectLoading = createSelector(selectSlice, state => state.loading)
 
 export const selectSuccess = createSelector(selectSlice, state => state.success);
 
-export const selectFailure = createSelector(selectSlice, state => state.failure);
+export const selectFailure = createSelector(selectSlice, state => state.failures);
 
 export const selectSnackBar = createSelector(selectSlice, state => state.snackbar);
 

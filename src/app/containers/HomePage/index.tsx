@@ -3,39 +3,37 @@
  * HomePage
  *
  */
-import { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { Container, Paper, Grid, Typography } from '@mui/material';
-
-import { selectData } from './slice/selectors';
-import { BASE_URL } from 'constants/config';
-import { actions } from './slice';
+import { Container, Typography } from '@mui/material';
+import { useHistory } from 'react-router-dom';
 import './index.scss';
 
 interface Props {}
 
 export default function HomePage(props: Props) {
-  const dispatch = useDispatch();
-  const data = useSelector(selectData);
-  useEffect(() => {
-    dispatch(actions.get());
-  }, [dispatch]);
+  const history = useHistory();
   return (
-    <Container className="home-root">
-      <Paper className="title" elevation={0}>
-        <Typography variant="h2" component="h2">
-          Hệ Thống Văn Bản Phục Vụ Đại Hội
-        </Typography>
-      </Paper>
-      <Grid className="file-wrappper">
-        {data.map(item => (
-          <Grid item xs={2} sm={4}>
-            <a href={`${BASE_URL}${item.url}`} target="_blank" rel="noreferrer">
-              <Paper className="file">{item.filename}</Paper>
-            </a>
-          </Grid>
-        ))}
-      </Grid>
+    <Container className="home-page">
+      <div>
+        <div className="block-1">
+          <div className="item-1" onClick={() => history.push('/file')}>
+            <Typography variant="h3" component="h3">
+              HỆ THỐNG CÁC VĂN BẢN PHỤC VỤ ĐẠI HỘI
+            </Typography>
+          </div>
+          <div className="item-2" onClick={() => history.push('/survey')}>
+            <Typography variant="h3" component="h3">
+              CÁC CÂU HỎI KHẢO SÁT ĐẦU GIỜ
+            </Typography>
+          </div>
+        </div>
+        <div className="block-2">
+          <div className="item-3" onClick={() => history.push('/quiz')}>
+            <Typography variant="h3" component="h3">
+              TRÒ CHƠI GIỮA GIỜ
+            </Typography>
+          </div>
+        </div>
+      </div>
     </Container>
   );
 }

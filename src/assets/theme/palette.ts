@@ -43,14 +43,10 @@ const palette = {
     light: colors.red[400],
   },
   text: {
-    primary: whiteText,
-    secondary: whiteText,
-    link: whiteText,
+    primary: darkText,
+    secondary: darkText,
+    link: darkText,
     dark: darkText,
-  },
-  background: {
-    default: '#1f1f1f',
-    paper: '#1f1f1f',
   },
   icon: colors.blueGrey[600],
   divider: main,

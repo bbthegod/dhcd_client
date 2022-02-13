@@ -1,0 +1,18 @@
+.root {
+  padding: 10px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.sideButton {
+  width: 100px;
+  height: 40px;
+  color: #ffffff !important;
+  font-weight: bold;
+}
+.centerButton {
+  width: 110px;
+  height: 40px;
+  color: #ffffff !important;
+  font-weight: bold;
+}

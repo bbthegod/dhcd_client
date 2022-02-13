@@ -11,7 +11,7 @@ export const initialState: DashboardState = {
   data: [],
   loading: false,
   success: false,
-  failure: false,
+  failures: false,
   snackbar: false,
   variant: '',
   message: '',

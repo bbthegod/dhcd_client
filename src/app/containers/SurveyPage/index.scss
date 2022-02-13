@@ -1,0 +1,22 @@
+.survey-root {
+  width: 90% !important;
+  padding: 0 !important;
+  .title {
+    margin-top: 32px;
+    padding: 16px;
+    background-color: #2e7d32;
+    h2 {
+      text-align: center;
+      color: #ffffff !important;
+    }
+  }
+}
+.survey-wrappper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 32px 0;
+  a {
+      text-decoration: none;
+  }
+}

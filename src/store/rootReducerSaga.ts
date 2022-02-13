@@ -2,14 +2,20 @@ import { combineReducers } from '@reduxjs/toolkit';
 import { all } from 'redux-saga/effects';
 
 import { homePageSlice } from 'app/containers/HomePage/slice';
+import { filePageSlice } from 'app/containers/FilePage/slice';
 import { loginPageSlice } from 'app/containers/LoginPage/slice';
 import { dashboardSlice } from 'app/containers/Dashboard/slice';
+import { surveyPageSlice } from 'app/containers/SurveyPage/slice';
+import { quizPageSlice } from 'app/containers/QuizPage/slice';
 // GENERATE NEW IMPORT ABOVE, DO NOT DELETE IT
 
 const slices = [
   homePageSlice,
   loginPageSlice,
   dashboardSlice,
+  filePageSlice,
+  surveyPageSlice,
+  quizPageSlice,
   // GENERATE NEW SLICE ABOVE, DO NOT DELETE IT
 ];
 

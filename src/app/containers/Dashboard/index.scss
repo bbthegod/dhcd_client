@@ -1,6 +1,8 @@
 .header-text {
   flex-grow: 1;
   text-align: center;
+  font-weight: bold;
+  color: #ffffff !important;
 }
 .header-logo {
   img {
@@ -8,4 +10,9 @@
     width: 100px;
   }
   margin: 16px 0px;
+}
+.header-back {
+  button {
+    color: #ffffff !important;
+  }
 }

@@ -7,7 +7,7 @@ export interface LoginPageState {
   data: AuthStorage | undefined;
   loading: boolean;
   success: boolean;
-  failure: boolean;
+  failures: boolean;
   snackbar: boolean;
   variant: string;
   message: string;

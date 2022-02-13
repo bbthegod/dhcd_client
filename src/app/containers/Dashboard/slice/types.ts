@@ -7,7 +7,7 @@ export interface DashboardState {
   data: any;
   loading: boolean;
   success: boolean;
-  failure: boolean;
+  failures: boolean;
   snackbar: boolean;
   variant: string;
   message: string;

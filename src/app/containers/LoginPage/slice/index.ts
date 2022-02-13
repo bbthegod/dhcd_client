@@ -11,7 +11,7 @@ export const initialState: LoginPageState = {
   data: undefined,
   loading: false,
   success: false,
-  failure: false,
+  failures: false,
   snackbar: false,
   variant: '',
   message: '',
@@ -24,18 +24,18 @@ const slice = createSlice({
     login(state, payload) {
       state.loading = true;
       state.success = false;
-      state.failure = false;
+      state.failures = false;
     },
     loginSuccess(state, actions) {
       state.data = actions.payload;
       state.loading = false;
       state.success = true;
-      state.failure = false;
+      state.failures = false;
     },
     loginFailure(state) {
       state.loading = false;
       state.success = false;
-      state.failure = true;
+      state.failures = true;
     },
     openSnackbar(state, payload) {
       state.snackbar = true;
@@ -51,7 +51,7 @@ const slice = createSlice({
       state.data = undefined;
       state.loading = false;
       state.success = false;
-      state.failure = false;
+      state.failures = false;
       state.snackbar = false;
       state.variant = '';
       state.message = '';
