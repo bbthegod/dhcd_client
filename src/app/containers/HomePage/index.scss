@@ -21,7 +21,8 @@
 }
 .item-1,
 .item-2,
-.item-3 {
+.item-3,
+.item-4  {
   width: 40% !important;
   padding: 16px;
   min-height: 60px;
@@ -39,4 +40,7 @@
 }
 .item-3 {
   background-color: #f9a825;
+}
+.item-4 {
+  background-color: #009688;
 }

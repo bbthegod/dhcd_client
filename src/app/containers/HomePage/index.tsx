@@ -26,10 +26,15 @@ export default function HomePage(props: Props) {
             </Typography>
           </div>
         </div>
-        <div className="block-2">
+        <div className="block-1">
           <div className="item-3" onClick={() => history.push('/quiz')}>
             <Typography variant="h3" component="h3">
               TRÒ CHƠI GIỮA GIỜ
+            </Typography>
+          </div>
+          <div className="item-4" onClick={() => history.push('/quiz')}>
+            <Typography variant="h3" component="h3">
+              ĐIỂM DANH
             </Typography>
           </div>
         </div>
