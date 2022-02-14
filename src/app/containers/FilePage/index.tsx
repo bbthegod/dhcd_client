@@ -41,7 +41,7 @@ export default function FilePage(props: Props) {
       </div>
       <Grid className="file-wrappper">
         {data
-          .filter(item => item.allowUser && user?.role === 'delegate')
+          .filter(item => item.allowDelegate && user?.role === 'delegate')
           .map(item => (
             <Grid item xs={12}>
               <a href={`${BASE_URL}${item.url}`} target="_blank" rel="noreferrer">
