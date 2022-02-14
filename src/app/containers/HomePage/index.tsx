@@ -35,11 +35,16 @@ export default function HomePage(props: Props) {
           </div>
         </div>
         <div className={`block-${user?.role === 'user' ? 1 : 2}`}>
-          <div className="item-3" onClick={() => history.push('/quiz')}>
+          {/* <div className="item-3" onClick={() => history.push('/quiz')}>
             <Typography variant="h3" component="h3">
               TRÒ CHƠI GIỮA GIỜ
             </Typography>
-          </div>
+          </div> */}
+          <a className="item-3" href="https://quizizz.com/join" target="_blank" rel="noreferrer">
+            <Typography variant="h3" component="h3">
+              TRÒ CHƠI GIỮA GIỜ
+            </Typography>
+          </a>
           {user?.role === 'user' && (
             <div className="item-4" onClick={() => dispatch(actions.checkin())}>
               <Typography variant="h3" component="h3">
