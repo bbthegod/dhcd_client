@@ -15,6 +15,7 @@ import AuthStorageContext from 'context/AuthStorageContext';
 import SnackbarContext from 'context/SnackbarContext';
 import { actions } from './slice';
 import { selectData, selectLoading, selectSnackBar, selectMessage, selectVariant } from './slice/selectors';
+import Logo from 'assets/images/logo.png';
 import './index.scss';
 
 interface Props {}
@@ -78,6 +79,9 @@ export default function LoginPage(props: Props) {
         <Grid container className="center-inside">
           <Grid item xs={10} sm={8} md={4} lg={4} xl={2}>
             <Paper className="login-paper">
+              <div className="logo">
+                <img src={Logo} alt="logo" />
+              </div>
               <Typography variant="h4" component="h4">
                 ĐĂNG NHẬP
               </Typography>

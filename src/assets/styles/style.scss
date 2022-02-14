@@ -22,3 +22,26 @@ body {
   justify-content: center !important;
   align-items: center !important;
 }
+
+.title-wrapper{
+  margin-top: 32px;
+  display: flex !important;
+  gap: 16px;
+  .go-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    width: fit-content;
+    color: #ffffff !important;
+  }
+  .title{
+    flex-grow: 1;
+    padding: 16px;
+    h2 {
+      text-align: center;
+      color: #ffffff !important;
+    }
+  }
+}
+

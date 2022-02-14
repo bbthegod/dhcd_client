@@ -18,21 +18,9 @@ export function* get() {
       yield put(actions.getSuccess(response));
     } else {
       yield put(actions.getFailure());
-      yield put(
-        snackbarActions.openSnackbar({
-          message: 'Thao tác thất bại!',
-          variant: 'error',
-        }),
-      );
     }
   } catch (err) {
     yield put(actions.getFailure());
-    yield put(
-      snackbarActions.openSnackbar({
-        message: 'Thao tác thất bại!',
-        variant: 'error',
-      }),
-    );
   }
 }
 

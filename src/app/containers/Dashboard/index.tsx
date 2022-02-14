@@ -3,21 +3,21 @@
  * Dashboard
  *
  */
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useContext, useMemo, useState } from 'react';
 import { SnackbarProvider } from 'notistack';
 import { useSelector, useDispatch } from 'react-redux';
 import SnackbarContext from 'context/SnackbarContext';
 import { useHistory } from 'react-router-dom';
 import { actions } from './slice';
 import { selectSnackBar, selectMessage, selectVariant } from './slice/selectors';
+import AuthStorageContext from 'context/AuthStorageContext';
+import ConfirmDialog from 'app/components/ConfirmDialog';
 import logo from 'assets/images/logo.png';
 
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Container from '@mui/material/Container';
 import './index.scss';
 
@@ -32,9 +32,14 @@ export default function Dashboard({ children }: Props) {
   const variant = useSelector(selectVariant);
   const providerRef = useRef<any>();
   const dispatch = useDispatch();
+  const AuthStorage = useContext(AuthStorageContext);
   const history = useHistory();
-  function goToHome() {
-    history.push('/');
+  const auth = AuthStorage.get();
+  const user = useMemo(() => auth?.user, [auth]);
+  const [openDialog, setOpenDialog] = useState(false);
+  function logout() {
+    localStorage.clear();
+    history.push('/login');
   }
   //====================================== Effect ======================================
   useEffect(() => {
@@ -66,9 +71,15 @@ export default function Dashboard({ children }: Props) {
                 ĐẠI HỘI CHI ĐOÀN CƠ SỞ VĂN PHÒNG TRUNG ƯƠNG ĐOÀN
               </Typography>
               <Box className="header-back">
-                <IconButton size="large" onClick={goToHome}>
-                  <ArrowForwardIcon />
-                </IconButton>
+                <Typography variant="h5" component="h5" className="user-name" onClick={() => setOpenDialog(true)}>
+                  {user?.fullname}
+                </Typography>
+                <ConfirmDialog
+                  message="Đăng xuất tài khoản?"
+                  open={openDialog}
+                  setOpen={setOpenDialog}
+                  handleAction={logout}
+                />
               </Box>
             </Toolbar>
           </Container>

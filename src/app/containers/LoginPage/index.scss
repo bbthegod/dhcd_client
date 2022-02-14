@@ -7,7 +7,7 @@
   }
 }
 .login-paper {
-  padding: 72px 24px;
+  padding: 36px 24px 72px 24px;
   border-radius: 10px !important;
   h4 {
     text-align: center;
@@ -18,5 +18,15 @@
   }
   .show-password {
     margin-bottom: 16px;
+  }
+  .logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+    img {
+      width: 100px;
+      height: 100px;
+      margin: 0 auto;
+    }
   }
 }

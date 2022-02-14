@@ -5,10 +5,12 @@
  */
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import { actions } from './slice';
 import { selectPlayData } from './slice/selectors';
 
 import { Container, Paper, Typography } from '@mui/material';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import QuestionContent from './components/QuestionContent';
 import ControlButtons from './components/ControlButtons';
 import QuestionList from './components/QuestionList';
@@ -21,6 +23,7 @@ export default function QuizPage(props: Props) {
   //====================================== Hooks ======================================
   const playData = useSelector(selectPlayData);
   const dispatch = useDispatch();
+  const history = useHistory();
   //====================================== State ======================================
   const [question, setQuestion] = useState<Question>();
   const [index, setIndex] = useState(0);
@@ -68,11 +71,16 @@ export default function QuizPage(props: Props) {
   //====================================== Render ======================================
   return (
     <Container className="quiz-root">
-      <Paper className="title" elevation={0}>
-        <Typography variant="h2" component="h2">
-          TRÒ CHƠI GIỮA GIỜ
-        </Typography>
-      </Paper>
+      <div className="title-wrapper">
+        <Paper className="go-back" elevation={0} onClick={() => history.push('/')}>
+          <ArrowBackIcon />
+        </Paper>
+        <Paper className="title" elevation={0}>
+          <Typography variant="h2" component="h2">
+            TRÒ CHƠI GIỮA GIỜ
+          </Typography>
+        </Paper>
+      </div>
       {!playData ? (
         <div className="quiz-announcement">
           <Typography variant="h2" component="h2">

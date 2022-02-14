@@ -19,8 +19,11 @@ export default function App() {
     <BrowserRouter>
       <AuthStorage>
         <ThemeProvider theme={theme}>
-          <Helmet titleTemplate="%s | Đại Hội Công Đoàn" defaultTitle="Đại Hội Công Đoàn">
-            <meta name="description" content="Đại Hội Công Đoàn" />
+          <Helmet
+            titleTemplate="%s | ĐẠI HỘI CHI ĐOÀN VĂN PHÒNG TRUNG ƯƠNG ĐOÀN"
+            defaultTitle="ĐẠI HỘI CHI ĐOÀN VĂN PHÒNG TRUNG ƯƠNG ĐOÀN"
+          >
+            <meta name="description" content="ĐẠI HỘI CHI ĐOÀN VĂN PHÒNG TRUNG ƯƠNG ĐOÀN" />
           </Helmet>
           <Switch>
             <Route path="/login" component={LoginPage} />

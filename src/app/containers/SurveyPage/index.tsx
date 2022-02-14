@@ -4,6 +4,7 @@
  *
  */
 import React, { useEffect, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import {
   Container,
@@ -17,6 +18,7 @@ import {
   Button,
   FormGroup,
 } from '@mui/material';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { actions } from './slice';
 import './index.scss';
 
@@ -54,6 +56,7 @@ export default function SurveyPage(props: Props) {
   const [result, setResult] = useState<Boolean[][]>([[]]);
   const [disabled, setDisabled] = useState(true);
   const dispatch = useDispatch();
+  const history = useHistory();
   useEffect(() => {
     let arr: Boolean[][] = [[]];
     for (let i = 0; i < 10; i++) {
@@ -84,11 +87,16 @@ export default function SurveyPage(props: Props) {
   }
   return (
     <Container className="survey-root">
-      <Paper className="title" elevation={0}>
-        <Typography variant="h2" component="h2">
-          CÁC CÂU HỎI KHẢO SÁT ĐẦU GIỜ
-        </Typography>
-      </Paper>
+      <div className="title-wrapper">
+        <Paper className="go-back" elevation={0} onClick={() => history.push('/')}>
+          <ArrowBackIcon />
+        </Paper>
+        <Paper className="title" elevation={0}>
+          <Typography variant="h2" component="h2">
+            CÁC CÂU HỎI KHẢO SÁT ĐẦU GIỜ
+          </Typography>
+        </Paper>
+      </div>
       <Grid className="survey-wrappper">
         {survey.map((item, index) => (
           <div className="survey">
