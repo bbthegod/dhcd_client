@@ -40,7 +40,7 @@ export default function HomePage(props: Props) {
               TRÒ CHƠI GIỮA GIỜ
             </Typography>
           </div> */}
-          <a className="item-3" href="https://quizizz.com/join" target="_blank" rel="noreferrer">
+          <a className="item-3" href="https://www.mentimeter.com/" target="_blank" rel="noreferrer">
             <Typography variant="h3" component="h3">
               TRÒ CHƠI GIỮA GIỜ
             </Typography>
