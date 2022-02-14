@@ -24,6 +24,7 @@ export default function FilePage(props: Props) {
   const history = useHistory();
   const auth = AuthStorage.get();
   const user = useMemo(() => auth?.user, [auth]);
+  console.log(user);
   useEffect(() => {
     dispatch(actions.get());
   }, [dispatch]);
@@ -40,15 +41,13 @@ export default function FilePage(props: Props) {
         </Paper>
       </div>
       <Grid className="file-wrappper">
-        {data
-          .filter(item => item.allowDelegate && user?.role === 'delegate')
-          .map(item => (
-            <Grid item xs={12}>
-              <a href={`${BASE_URL}${item.url}`} target="_blank" rel="noreferrer">
-                <Paper className="file">{item.filename}</Paper>
-              </a>
-            </Grid>
-          ))}
+        {data.map(item => (
+          <Grid item xs={12}>
+            <a href={`${BASE_URL}${item.url}`} target="_blank" rel="noreferrer">
+              <Paper className="file">{item.filename}</Paper>
+            </a>
+          </Grid>
+        ))}
       </Grid>
     </Container>
   );
