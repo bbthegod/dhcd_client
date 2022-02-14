@@ -59,7 +59,6 @@ export function* answer(payload) {
       method: 'POST',
       data: payload.payload,
     });
-    console.log(response);
     if (response) {
       yield put(actions.answerSuccess());
     } else {
