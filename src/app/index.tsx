@@ -19,8 +19,8 @@ export default function App() {
     <BrowserRouter>
       <AuthStorage>
         <ThemeProvider theme={theme}>
-          <Helmet titleTemplate="%s | React Opencore" defaultTitle="React Opencore">
-            <meta name="description" content="React application" />
+          <Helmet titleTemplate="%s | Đại Hội Công Đoàn" defaultTitle="Đại Hội Công Đoàn">
+            <meta name="description" content="Đại Hội Công Đoàn" />
           </Helmet>
           <Switch>
             <Route path="/login" component={LoginPage} />
