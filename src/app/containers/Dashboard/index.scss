@@ -1,8 +1,10 @@
 .header-text {
   flex-grow: 1;
   text-align: center;
-  font-weight: bold;
-  color: #ffffff !important;
+  h2 {
+    // font-weight: bold;
+    color: #ffffff !important;
+  }
 }
 .header-logo {
   img {

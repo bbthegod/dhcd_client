@@ -67,9 +67,14 @@ export default function Dashboard({ children }: Props) {
               <Box className="header-logo">
                 <img src={logo} alt="logo" />
               </Box>
-              <Typography variant="h1" component="h1" className="header-text">
-                ĐẠI HỘI CHI ĐOÀN CƠ SỞ VĂN PHÒNG TRUNG ƯƠNG ĐOÀN
-              </Typography>
+              <div className="header-text">
+                <Typography variant="h2" component="h2">
+                  ĐẠI HỘI CHI ĐOÀN CƠ SỞ
+                </Typography>
+                <Typography variant="h2" component="h2">
+                  VĂN PHÒNG TRUNG ƯƠNG ĐOÀN
+                </Typography>
+              </div>
               <Box className="header-back">
                 <Typography variant="h5" component="h5" className="user-name" onClick={() => setOpenDialog(true)}>
                   {user?.fullname}
